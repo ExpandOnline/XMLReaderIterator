@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\XMLReaderNode</OriginalElement>
+  <nodes>
+    <node x="11.5" y="234.0">\XMLElementIterator</node>
+    <node x="603.5" y="234.0">\XMLNodeTypeFilter</node>
+    <node x="93.76388888888891" y="156.0">\XMLReaderIterator</node>
+    <node x="301.0" y="156.0">\XMLReaderNode</node>
+    <node x="305.375" y="78.0">\XMLReaderAggregate</node>
+    <node x="652.25" y="78.0">\FilterIterator</node>
+    <node x="160.5" y="234.0">\XMLChildIterator</node>
+    <node x="754.0" y="156.0">\XMLAttributeIterator</node>
+    <node x="749.5" y="234.0">\XMLElementXpathFilter</node>
+    <node x="521.5" y="312.0">\XMLAttributeFilter</node>
+    <node x="294.5" y="234.0">\XMLReaderElement</node>
+    <node x="599.0" y="156.0">\XMLReaderFilterBase</node>
+    <node x="383.5" y="312.0">\XMLAttributePreg</node>
+    <node x="664.25" y="0.0">\Iterator</node>
+    <node x="0.0" y="312.0">\XMLChildElementIterator</node>
+    <node x="440.5" y="234.0">\XMLAttributeFilterBase</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\XMLAttributeFilter" target="\XMLAttributeFilterBase">
+      <point x="0.0" y="-14.0" />
+      <point x="581.5" y="287.0" />
+      <point x="547.75" y="287.0" />
+      <point x="35.75" y="14.0" />
+    </edge>
+    <edge source="\XMLReaderElement" target="\XMLReaderNode">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="\XMLChildIterator" target="\XMLReaderIterator">
+      <point x="0.0" y="-14.0" />
+      <point x="217.5" y="209.0" />
+      <point x="188.2638888888889" y="209.0" />
+      <point x="31.5" y="14.0" />
+    </edge>
+    <edge source="\XMLReaderIterator" target="\XMLReaderAggregate">
+      <point x="31.5" y="-14.0" />
+      <point x="188.2638888888889" y="136.0" />
+      <point x="322.75" y="136.0" />
+      <point x="-52.125" y="14.0" />
+    </edge>
+    <edge source="\XMLAttributeIterator" target="\XMLReaderAggregate">
+      <point x="-33.5" y="-14.0" />
+      <point x="787.5" y="126.0" />
+      <point x="427.0" y="126.0" />
+      <point x="52.125" y="14.0" />
+    </edge>
+    <edge source="\XMLReaderIterator" target="\Iterator">
+      <point x="-31.5" y="-14.0" />
+      <point x="125.26388888888891" y="53.0" />
+      <point x="676.25" y="53.0" />
+      <point x="-24.0" y="14.0" />
+    </edge>
+    <edge source="\XMLNodeTypeFilter" target="\XMLReaderFilterBase">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="\XMLElementIterator" target="\XMLReaderIterator">
+      <point x="0.0" y="-14.0" />
+      <point x="76.0" y="209.0" />
+      <point x="125.26388888888891" y="209.0" />
+      <point x="-31.5" y="14.0" />
+    </edge>
+    <edge source="\XMLAttributeIterator" target="\Iterator">
+      <point x="33.5" y="-14.0" />
+      <point x="854.5" y="53.0" />
+      <point x="724.25" y="53.0" />
+      <point x="24.0" y="14.0" />
+    </edge>
+    <edge source="\XMLReaderNode" target="\XMLReaderAggregate">
+      <point x="0.0" y="-14.0" />
+      <point x="-17.375" y="14.0" />
+    </edge>
+    <edge source="\XMLReaderFilterBase" target="\FilterIterator">
+      <point x="33.75" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="\FilterIterator" target="\Iterator">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="\XMLReaderFilterBase" target="\XMLReaderAggregate">
+      <point x="-33.75" y="-14.0" />
+      <point x="632.75" y="136.0" />
+      <point x="392.25" y="136.0" />
+      <point x="17.375" y="14.0" />
+    </edge>
+    <edge source="\XMLChildElementIterator" target="\XMLElementIterator">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="\XMLElementXpathFilter" target="\XMLReaderFilterBase">
+      <point x="0.0" y="-14.0" />
+      <point x="821.0" y="209.0" />
+      <point x="711.5" y="209.0" />
+      <point x="45.0" y="14.0" />
+    </edge>
+    <edge source="\XMLAttributeFilterBase" target="\XMLReaderFilterBase">
+      <point x="0.0" y="-14.0" />
+      <point x="512.0" y="209.0" />
+      <point x="621.5" y="209.0" />
+      <point x="-45.0" y="14.0" />
+    </edge>
+    <edge source="\XMLAttributePreg" target="\XMLAttributeFilterBase">
+      <point x="0.0" y="-14.0" />
+      <point x="442.5" y="287.0" />
+      <point x="476.25" y="287.0" />
+      <point x="-35.75" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="446.5" y="170.0" />
+  <SelectedNodes />
+  <Categories />
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
