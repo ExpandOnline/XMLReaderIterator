@@ -26,12 +26,36 @@
  */
 class XMLReaderNode implements XMLReaderAggregate
 {
-    public $name;
+    /** @var XMLReader */
     private $reader;
+
+    /** @var int */
     private $nodeType;
-    private $string;
-    private $attributes;
+
+    /** @var string */
+    private $name;
+
+    /** @var string */
+    private $localName;
+
+    /**
+     * cache for expansion into SimpleXMLElement
+     *
+     * @var null|SimpleXMLElement
+     * @see asSimpleXML
+     */
     private $simpleXML;
+
+    /**
+     * cache for XMLAttributeIterator
+     *
+     * @var null|XMLAttributeIterator
+     * @see getAttributes
+     */
+    private $attributes;
+
+    /** @var null|string  */
+    private $string;
 
     public function __construct(XMLReader $reader)
     {
@@ -125,9 +149,20 @@ class XMLReaderNode implements XMLReaderAggregate
         return new XMLChildIterator($this->reader);
     }
 
+    /**
+     * @return string name
+     */
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return string local name
+     */
+    public function getLocalName()
+    {
+        return $this->localName;
     }
 
     public function getReader()
