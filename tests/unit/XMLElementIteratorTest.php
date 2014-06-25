@@ -90,6 +90,31 @@ class XMLElementIteratorTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function localNameIteration()
+    {
+        $reader = new XMLReaderStub('<!-- -->
+        <root xmlns:name="space:1">
+            <foo>
+                <name:bar id="1"/>
+                <foo/>
+                <bar id="2"/>
+            </foo>
+        </root>');
+
+        $localName = 'bar';
+
+        $it = new XMLElementIterator($reader, $localName);
+
+        $it->rewind();
+        $this->assertSame($localName, $reader->localName);
+        $this->assertSame("name:$localName", $reader->name);
+
+        $it->next();
+        $this->assertSame($localName, $reader->name);
+
+    }
+
+    /** @test */
     public function getChildren()
     {
         $reader = $this->createReader();
