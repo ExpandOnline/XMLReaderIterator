@@ -27,8 +27,9 @@
 class XMLReaderNode implements XMLReaderAggregate
 {
     public $name;
+    public $localName;
     private $reader;
-    private $nodeType;
+    public $nodeType;
     private $string;
     private $attributes;
     private $simpleXML;
@@ -38,6 +39,7 @@ class XMLReaderNode implements XMLReaderAggregate
         $this->reader         = $reader;
         $this->nodeType       = $reader->nodeType;
         $this->name           = $reader->name;
+        $this->localName      = $reader->localName;
     }
 
     public function __toString()
