@@ -71,5 +71,9 @@ class XMLReaderElement extends XMLReaderNode
         }
         $this->name_       = $reader->name;
         $this->attributes_ = parent::getAttributes()->getArrayCopy();
+		if (isset($this->attributes_['xmlns'])) {
+			$this->attributes_['xmlns:nsdefault'] = $this->attributes_['xmlns'];
+			unset($this->attributes_['xmlns']);
+		}
     }
 }
