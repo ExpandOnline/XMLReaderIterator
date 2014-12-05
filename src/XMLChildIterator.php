@@ -30,11 +30,16 @@ class XMLChildIterator extends XMLReaderIterator
 {
     private $stopDepth;
 
+	private $startName;
+
+	private static $goToNext = true;
+
     public function __construct(XMLReader $reader)
     {
         parent::__construct($reader);
         $this->stopDepth = $reader->depth;
-    }
+		$this->startName = $reader->name;
+	}
 
     public function rewind()
     {
@@ -42,9 +47,21 @@ class XMLChildIterator extends XMLReaderIterator
         parent::rewind();
     }
 
+	public function next() {
+		if (self::$goToNext) {
+			parent::next();
+		}
+		self::$goToNext = true;
+	}
+
     public function valid()
     {
         $parent = parent::valid();
+
+		// Prevent skipping elements due to self closing tags.
+		if ($this->reader->depth == $this->stopDepth && $this->startName != $this->reader->name) {
+			self::$goToNext = false;
+		}
 
         return $parent and $this->reader->depth > $this->stopDepth;
     }
