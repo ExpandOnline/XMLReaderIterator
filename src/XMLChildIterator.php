@@ -59,7 +59,7 @@ class XMLChildIterator extends XMLReaderIterator
         $parent = parent::valid();
 
 		// Prevent skipping elements due to self closing tags.
-		if ($this->reader->depth == $this->stopDepth && $this->startName != $this->reader->name) {
+		if ($this->reader->depth <= $this->stopDepth && $this->startName != $this->reader->name) {
 			self::$goToNext = false;
 		}
 
