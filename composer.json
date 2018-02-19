@@ -4,7 +4,6 @@
     "version": "0.1.7",
     "keywords": ["XML", "XMLReader", "Iterator"],
     "homepage": "https://github.com/hakre/XMLReaderIterator",
-    "minimum-stability": "stable",
     "license": "AGPL-3.0",
     "authors": [
         {
